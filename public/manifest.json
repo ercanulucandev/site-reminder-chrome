@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "Site Notları",
+  "short_name": "Site Notları",
+  "version": "0.1.0",
+  "description": "Her web sitesi için notlar, yapılacaklar ve hatırlatıcılar.",
+  "default_locale": "tr",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Site Notları",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "options_page": "dashboard.html",
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "storage",
+    "alarms",
+    "notifications",
+    "contextMenus",
+    "sidePanel",
+    "tabs",
+    "favicon"
+  ],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": { "default": "Alt+Shift+N" },
+      "description": "Hızlı not penceresini aç"
+    },
+    "open-side-panel": {
+      "suggested_key": { "default": "Alt+Shift+S" },
+      "description": "Yan paneli aç"
+    }
+  }
+}
